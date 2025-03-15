@@ -14,7 +14,7 @@
 
 ###
 
-<a href="https://dlivary-app.vercel.app/">https://dlivary-app.vercel.app/</a>
+<a href="https://course-player-page.vercel.app/">https://course-player-page.vercel.app/</a>
 
 ###
 <h3 align="left">Figma</h3>
