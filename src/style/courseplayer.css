@@ -1,0 +1,302 @@
+*{
+    /* border:1px solid; */
+    font-family: "League Spartan", sans-serif;
+}
+:root{
+    --bg:#ffffff;
+    --headerbg: #F5F9FA;
+    --progresstxt:#485293;
+    --bs-breadcrumb-divider:"\F285";
+    --materialdivuder:rgba(0, 0, 0, .125);
+    --border:#EDEDED;
+    --progresslocborder:#C8C8C8;
+    --successbgprogress:#6ABD8A;
+    --successbgbtn:#41b69d;
+    --questionbage:#F2FAF8;
+    --minutesbage:#FDF2F4;
+    --questionbagetxt:#40C1CE;
+    --minutesbagetxt:#E55891;
+}
+html{
+    background-color: var(--bg);
+}
+body{
+    background-color: var(--bg);
+}
+.row{
+    margin-left: 0;
+    margin-right: 0;
+}
+.successbgprogress{
+    background-color: var(--successbgprogress);
+}
+.successbgbtn{
+    background-color: var(--successbgbtn);
+}
+.pageheader{
+    padding: 10px 20px 10px 20px;
+    background-color: var(--headerbg);
+}
+.breadcrumb-item{
+    align-items: center;
+    font-size: 20px;
+}
+.breadcrumb-item::before{
+    content: "";
+    font-size: 10px;
+    height: 100%;
+    font-weight: 600 !important;
+    padding-top: 8px;
+}
+.coursetitle{
+    margin-top: 26px;
+    font-size: 50px;
+    font-weight: 600;
+}
+.pagebody{
+    background-color: var(--bg);
+    padding: 15px 20px 15px 20px;
+    display: grid;
+    grid-template-columns: 64% auto;
+    grid-template-rows: auto auto auto;
+    column-gap: 70px;
+}
+.mainview{
+    order: 1;
+    background-color: var(--bg);
+}
+.coursevideo{
+    width : 100%;
+}
+.pageshortcut{
+    margin: 40px 0px 60px 0px;
+}
+.pageshortcutbtn{
+    border-color: var(--border);
+    box-shadow: none !important;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 16px 0px 0px;
+    font-size: 18px;
+}
+.pageshortcutbtn::before{font-weight: 600 !important;}
+.materials{
+    padding-bottom: 35px;
+    order: 2;
+    background-color: var(--bg);
+}
+.coursematerialsheader{
+    margin-bottom: 40px;
+    font-size: 36px;
+}
+.coursematerialsbody{
+    font-size: 20px;
+    /* font-weight: 600; */
+    width: 100%;
+    box-shadow: 0px 0px 20px #00000010;
+    padding: 15px 20px 15px 25px;
+}
+.coursematerialsitem{
+    /* color: var(--text-secondary); */
+    padding: 18px 0px 18px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+.topics{
+    grid-row: span 3;
+    order: 1;
+    background-color: var(--bg);
+}
+.topicsheader{
+    margin-bottom: 40px;
+}
+.topicsheadertitle{
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+.topicsheaderprogress{}
+.topicsheaderprogresslocsignbar{}
+.topicsheaderprogresslocsign{
+    font-size: 14px;
+    font-weight: 600;
+    border: 3px solid var(--progresslocborder);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--progresstxt);
+    margin-bottom: 16px;
+    margin-left: calc(63% - 22px);
+    position: relative;
+}
+.topicsheaderprogresslocsign::before{
+    content: "\F229";
+    color: var(--progresslocborder);
+    position: absolute;
+    bottom: -15px;
+    font-size: 11px;
+}
+.topicsheaderprogressbar{
+    height: 5px;
+    border-radius: 20px;
+}
+.topicsheaderprogressbar>.progress-bar{
+    border-radius: 20px;
+}
+.topicsheaderprogressvaluebar{}
+.topicsheaderprogressvalue{
+    color: var(--progresstxt);
+    margin-left: calc(63% - 11px);
+    margin-bottom: 15px;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 600;
+}
+.topicheaderbtn{
+    padding: 20px 20px 0px 20px;
+}
+.topicheaderbtn>button{
+    padding-left: 0;
+    padding-right: 0;
+    background-color: var(--bg) !important;
+    box-shadow: none !important;
+}
+.topicheaderbtn>button:not(.collapsed):not(:focus){
+    box-shadow: inset 0 -1px 0 rgba(0,0,0,.125) !important;
+}
+.topicheaderbtn>button:not(.collapsed):focus{
+    box-shadow: inset 0 -1px 0 rgba(0,0,0,.125) !important;
+}
+.accordion-button:not(.collapsed)::after{
+    content: "";
+    background-image: url(../photo/topics/close.png) !important;
+    background-position: center;
+    background-size: 15px;
+}
+.accordion-button::after{
+    content: "";
+    background-image: url(../photo/topics/open.png) !important;
+    background-size: 15px;
+    background-position: center;
+}
+.topicbody>.accordion-body{
+    padding-top: 0px;
+}
+.topicitem{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.topiciteminfo{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    flex-grow: 1;
+    flex-basis: 0;
+}
+.topicitemque{
+    background-color: var(--questionbage);
+    color: var(--questionbagetxt);
+    padding: 2px 8px 0px 8px;
+    
+}
+.topicitemmin{
+    background-color: var(--minutesbage);
+    color: var(--minutesbagetxt);
+    padding: 2px 8px 0px 8px;
+    margin-left: 8px;
+}
+.comments{
+    padding-top: 35px;
+    order: 4;
+    background-color: var(--bg);
+}
+.commentsheader{
+    margin-bottom: 0px;
+    font-size: 36px;
+}
+.commentitem{
+    padding: 35px 0px 20px 0px;
+}
+.commentsenderphoto{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+}
+.commentsform{
+    margin: 20px 0px 20px 0px;
+}
+.commentsforminput{
+    font-size: 19px;
+    font-weight: 300;
+    box-shadow: 0px 0px 20px #00000017;
+    height: 180px;
+    padding: 25px;
+    border: none;
+}
+.commentsforminput:focus{
+    box-shadow: 0px 0px 20px #00000017;
+}
+.commentsformsubmit{
+    width: 200px;
+    height: 60px;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    box-shadow: none !important;
+}
+.commentsformsubmit>i::before{
+    font-weight: 900 !important;
+}
+@media (max-width:1200px) {
+    .pagebody{
+        grid-template-columns:auto;
+        grid-template-rows: auto auto auto auto;
+    }
+    .lgdivider{
+        border-bottom: 1px solid var(--materialdivuder);
+    }
+    .materials{
+        order: 2;
+    }
+    .topics{
+        order: 3;
+    }
+}
+@media (max-width:600px) {
+    .breadcrumb-item{
+        font-size: 15px;
+    }
+    .breadcrumb-item::before{
+        padding-top: 6px;
+    }
+    .coursetitle{
+        font-size: 35px;
+    }
+    .mainview{
+        width: 100%;
+        padding-top: 10px;
+        position: sticky;
+        top: 0px;
+        z-index: 100;
+    }
+}
+@media (max-height:500px) {
+    .mainview{
+       position: relative;
+       top: 0px;
+    }
+}
